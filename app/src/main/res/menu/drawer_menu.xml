@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:icon="@drawable/ic_my_theme" android:title="My Theme"/>
+    <item android:icon="@drawable/ic_my_wallpaper" android:title="My Wallpaper"/>
+    <item android:icon="@drawable/ic_diy" android:title="My DIY"/>
+    <item android:icon="@drawable/ic_fonts" android:title="My fonts"/>
+    <item android:icon="@drawable/ic_video" android:title="My Video Show"/>
+    <item android:icon="@drawable/ic_lockscreen" android:title="Magazine lockscreen"/>
+    <item android:icon="@drawable/ic_share" android:title="Share"/>
+    <item android:icon="@drawable/ic_settings" android:title="Settings"/>
+</menu>

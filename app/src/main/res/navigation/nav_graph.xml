@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/themeFragment2">
+
+    <fragment
+        android:id="@+id/discoveryFragment2"
+        android:name="com.example.navigationview.DiscoveryFragment"
+        android:label="fragment_discovery"
+        tools:layout="@layout/fragment_discovery" />
+    <fragment
+        android:id="@+id/magazineLockscreenFragment2"
+        android:name="com.example.navigationview.MagazineLockscreenFragment"
+        android:label="fragment_magazine_lockscreen"
+        tools:layout="@layout/fragment_magazine_lockscreen" />
+    <fragment
+        android:id="@+id/myDIYFragment2"
+        android:name="com.example.navigationview.MyDIYFragment"
+        android:label="fragment_my_d_i_y"
+        tools:layout="@layout/fragment_my_d_i_y" />
+    <fragment
+        android:id="@+id/myFontsFragment2"
+        android:name="com.example.navigationview.MyFontsFragment"
+        android:label="fragment_my_fonts"
+        tools:layout="@layout/fragment_my_fonts" />
+    <fragment
+        android:id="@+id/myThemeFragment2"
+        android:name="com.example.navigationview.MyThemeFragment"
+        android:label="fragment_my_theme"
+        tools:layout="@layout/fragment_my_theme" />
+    <fragment
+        android:id="@+id/myVideoShowFragment2"
+        android:name="com.example.navigationview.MyVideoShowFragment"
+        android:label="fragment_my_video_show"
+        tools:layout="@layout/fragment_my_video_show" />
+    <fragment
+        android:id="@+id/myWallpaperFragment2"
+        android:name="com.example.navigationview.MyWallpaperFragment"
+        android:label="fragment_my_wallpaper"
+        tools:layout="@layout/fragment_my_wallpaper" />
+    <fragment
+        android:id="@+id/settingsFragment2"
+        android:name="com.example.navigationview.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/shareFragment2"
+        android:name="com.example.navigationview.ShareFragment"
+        android:label="fragment_share"
+        tools:layout="@layout/fragment_share" />
+    <fragment
+        android:id="@+id/themeFragment2"
+        android:name="com.example.navigationview.ThemeFragment"
+        android:label="fragment_theme"
+        tools:layout="@layout/fragment_theme" />
+    <fragment
+        android:id="@+id/wallpaperFragment2"
+        android:name="com.example.navigationview.WallpaperFragment"
+        android:label="fragment_wallpaper"
+        tools:layout="@layout/fragment_wallpaper" />
+    <fragment
+        android:id="@+id/weeklyFragment2"
+        android:name="com.example.navigationview.WeeklyFragment"
+        android:label="fragment_weekly"
+        tools:layout="@layout/fragment_weekly" />
+</navigation>
