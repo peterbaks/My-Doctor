@@ -1,4 +1,4 @@
-package com.example.navigationview;
+package com.example.mydoctor;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,6 +21,7 @@ import android.widget.Toast;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.example.navigationview.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -29,9 +30,6 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import org.json.JSONObject;
-
-import static com.example.navigationview.AppConfig.GOOGLE_BROWSER_API_KEY;
-import static com.example.navigationview.AppConfig.PROXIMITY_RADIUS;
 
 public class NearestFragment extends Fragment implements OnMapReadyCallback, LocationListener {
     GoogleMap map;
@@ -82,10 +80,10 @@ public class NearestFragment extends Fragment implements OnMapReadyCallback, Loc
 
                 new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?");
         googlePlacesUrl.append("location=").append(lat).append(",").append(lng);
-        googlePlacesUrl.append("&radius=").append(PROXIMITY_RADIUS);
+        googlePlacesUrl.append("&radius=").append(AppConfig.PROXIMITY_RADIUS);
         googlePlacesUrl.append("&types=").append(type);
         googlePlacesUrl.append("&sensor=true");
-        googlePlacesUrl.append("&key=" + GOOGLE_BROWSER_API_KEY);
+        googlePlacesUrl.append("&key=" + AppConfig.GOOGLE_BROWSER_API_KEY);
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET,googlePlacesUrl.toString(),null,
 

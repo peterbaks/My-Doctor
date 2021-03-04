@@ -1,4 +1,4 @@
-package com.example.navigationview;
+package com.example.mydoctor;
 
 public class AppConfig {
 

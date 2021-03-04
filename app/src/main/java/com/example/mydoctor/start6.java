@@ -1,15 +1,16 @@
-package com.example.navigationview;
+package com.example.mydoctor;
 
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import com.example.navigationview.R;
 
 
 public class start6 extends Fragment {

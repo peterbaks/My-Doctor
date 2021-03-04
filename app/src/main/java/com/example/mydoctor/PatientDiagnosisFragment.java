@@ -1,4 +1,4 @@
-package com.example.navigationview;
+package com.example.mydoctor;
 
 import android.os.Bundle;
 
@@ -13,14 +13,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-public class PatientInputFragment extends Fragment {
+import com.example.navigationview.R;
+
+public class PatientDiagnosisFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =inflater.inflate(R.layout.fragment_patient_input, container, false);
-       setHasOptionsMenu(true);
+        View view = inflater.inflate(R.layout.fragment_patient_diagnosis, container, false);
+        setHasOptionsMenu(true);
         return view;
     }
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {

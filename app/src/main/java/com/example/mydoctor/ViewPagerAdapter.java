@@ -1,4 +1,4 @@
-package com.example.navigationview;
+package com.example.mydoctor;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

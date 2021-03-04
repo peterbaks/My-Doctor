@@ -6,7 +6,7 @@
     app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.navigationview.HomeFragment"
+        android:name="com.example.mydoctor.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home">
         <action
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/medicalProfileFragment"
-        android:name="com.example.navigationview.MedicalProfileFragment"
+        android:name="com.example.mydoctor.MedicalProfileFragment"
         android:label="Medical Profile"
         tools:layout="@layout/fragment_medical_profile">
         <action
@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/successFragment"
-        android:name="com.example.navigationview.SuccessFragment"
+        android:name="com.example.mydoctor.SuccessFragment"
         tools:layout="@layout/fragment_success">
         <action
             android:id="@+id/action_successFragment_to_patientInputFragment"
@@ -32,32 +32,32 @@
     </fragment>
     <fragment
         android:id="@+id/nearestFragment"
-        android:name="com.example.navigationview.NearestFragment"
+        android:name="com.example.mydoctor.NearestFragment"
         android:label="Nearby Hospital"
         tools:layout="@layout/fragment_nearest" />
     <fragment
         android:id="@+id/discoveryFragment"
-        android:name="com.example.navigationview.DiscoveryFragment"
+        android:name="com.example.mydoctor.DiscoveryFragment"
         android:label="Discover"
         tools:layout="@layout/fragment_discovery" />
     <fragment
         android:id="@+id/personalProfileFragment"
-        android:name="com.example.navigationview.PersonalProfileFragment"
+        android:name="com.example.mydoctor.PersonalProfileFragment"
         android:label="Personal Profile"
         tools:layout="@layout/fragment_personal_profile" />
     <fragment
         android:id="@+id/medicalFragment"
-        android:name="com.example.navigationview.MedicalFragment"
+        android:name="com.example.mydoctor.MedicalFragment"
         android:label="Medical Profile"
         tools:layout="@layout/fragment_medical" />
     <fragment
         android:id="@+id/patientDiagnosisFragment"
-        android:name="com.example.navigationview.PatientDiagnosisFragment"
+        android:name="com.example.mydoctor.PatientDiagnosisFragment"
         android:label="Patient Diagnosis"
         tools:layout="@layout/fragment_patient_diagnosis" />
     <fragment
         android:id="@+id/patientInputFragment"
-        android:name="com.example.navigationview.PatientInputFragment"
+        android:name="com.example.mydoctor.PatientInputFragment"
         android:label="Patient Input"
         tools:layout="@layout/fragment_patient_input">
         <action
@@ -66,7 +66,7 @@
     </fragment>
     <fragment
         android:id="@+id/contacts"
-        android:name="com.example.navigationview.contacts"
+        android:name="com.example.mydoctor.contacts"
         android:label="fragment_contacts"
         tools:layout="@layout/fragment_contacts" />
 </navigation>

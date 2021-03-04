@@ -1,14 +1,15 @@
-package com.example.navigationview;
+package com.example.mydoctor;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.navigationview.R;
 
 import java.util.ArrayList;
 

@@ -15,7 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NavigationView">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name="com.example.mydoctor.MainActivity"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -28,7 +28,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyD1pqCXuTVMkomWmR89VOU78vdRCPY_mfI" />
 
-        <activity android:name=".startActivity">
+        <activity android:name="com.example.mydoctor.startActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

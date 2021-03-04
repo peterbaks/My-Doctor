@@ -1,4 +1,4 @@
-package com.example.navigationview;
+package com.example.mydoctor;
 
 import android.app.Application;
 import android.text.TextUtils;

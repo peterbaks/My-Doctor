@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_alignParentTop="true"
     android:orientation="vertical"
-    tools:context=".HomeFragment">
+    tools:context="com.example.mydoctor.HomeFragment">
 
 
     <TextView
