@@ -3,66 +3,70 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/themeFragment2">
-
+    app:startDestination="@id/homeFragment">
     <fragment
-        android:id="@+id/discoveryFragment2"
+        android:id="@+id/homeFragment"
+        android:name="com.example.navigationview.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_medicalProfileFragment"
+            app:destination="@id/medicalProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicalProfileFragment"
+        android:name="com.example.navigationview.MedicalProfileFragment"
+        android:label="Medical Profile"
+        tools:layout="@layout/fragment_medical_profile">
+        <action
+            android:id="@+id/action_medicalProfileFragment_to_successFragment"
+            app:destination="@id/successFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="com.example.navigationview.SuccessFragment"
+        tools:layout="@layout/fragment_success">
+        <action
+            android:id="@+id/action_successFragment_to_patientInputFragment"
+            app:destination="@id/patientInputFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nearestFragment"
+        android:name="com.example.navigationview.NearestFragment"
+        android:label="Nearby Hospital"
+        tools:layout="@layout/fragment_nearest" />
+    <fragment
+        android:id="@+id/discoveryFragment"
         android:name="com.example.navigationview.DiscoveryFragment"
-        android:label="fragment_discovery"
+        android:label="Discover"
         tools:layout="@layout/fragment_discovery" />
     <fragment
-        android:id="@+id/magazineLockscreenFragment2"
-        android:name="com.example.navigationview.MagazineLockscreenFragment"
-        android:label="fragment_magazine_lockscreen"
-        tools:layout="@layout/fragment_magazine_lockscreen" />
+        android:id="@+id/personalProfileFragment"
+        android:name="com.example.navigationview.PersonalProfileFragment"
+        android:label="Personal Profile"
+        tools:layout="@layout/fragment_personal_profile" />
     <fragment
-        android:id="@+id/myDIYFragment2"
-        android:name="com.example.navigationview.MyDIYFragment"
-        android:label="fragment_my_d_i_y"
-        tools:layout="@layout/fragment_my_d_i_y" />
+        android:id="@+id/medicalFragment"
+        android:name="com.example.navigationview.MedicalFragment"
+        android:label="Medical Profile"
+        tools:layout="@layout/fragment_medical" />
     <fragment
-        android:id="@+id/myFontsFragment2"
-        android:name="com.example.navigationview.MyFontsFragment"
-        android:label="fragment_my_fonts"
-        tools:layout="@layout/fragment_my_fonts" />
+        android:id="@+id/patientDiagnosisFragment"
+        android:name="com.example.navigationview.PatientDiagnosisFragment"
+        android:label="Patient Diagnosis"
+        tools:layout="@layout/fragment_patient_diagnosis" />
     <fragment
-        android:id="@+id/myThemeFragment2"
-        android:name="com.example.navigationview.MyThemeFragment"
-        android:label="fragment_my_theme"
-        tools:layout="@layout/fragment_my_theme" />
+        android:id="@+id/patientInputFragment"
+        android:name="com.example.navigationview.PatientInputFragment"
+        android:label="Patient Input"
+        tools:layout="@layout/fragment_patient_input">
+        <action
+            android:id="@+id/action_patientInputFragment_to_patientDiagnosisFragment"
+            app:destination="@id/patientDiagnosisFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/myVideoShowFragment2"
-        android:name="com.example.navigationview.MyVideoShowFragment"
-        android:label="fragment_my_video_show"
-        tools:layout="@layout/fragment_my_video_show" />
-    <fragment
-        android:id="@+id/myWallpaperFragment2"
-        android:name="com.example.navigationview.MyWallpaperFragment"
-        android:label="fragment_my_wallpaper"
-        tools:layout="@layout/fragment_my_wallpaper" />
-    <fragment
-        android:id="@+id/settingsFragment2"
-        android:name="com.example.navigationview.SettingsFragment"
-        android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" />
-    <fragment
-        android:id="@+id/shareFragment2"
-        android:name="com.example.navigationview.ShareFragment"
-        android:label="fragment_share"
-        tools:layout="@layout/fragment_share" />
-    <fragment
-        android:id="@+id/themeFragment2"
-        android:name="com.example.navigationview.ThemeFragment"
-        android:label="fragment_theme"
-        tools:layout="@layout/fragment_theme" />
-    <fragment
-        android:id="@+id/wallpaperFragment2"
-        android:name="com.example.navigationview.WallpaperFragment"
-        android:label="fragment_wallpaper"
-        tools:layout="@layout/fragment_wallpaper" />
-    <fragment
-        android:id="@+id/weeklyFragment2"
-        android:name="com.example.navigationview.WeeklyFragment"
-        android:label="fragment_weekly"
-        tools:layout="@layout/fragment_weekly" />
+        android:id="@+id/contacts"
+        android:name="com.example.navigationview.contacts"
+        android:label="fragment_contacts"
+        tools:layout="@layout/fragment_contacts" />
 </navigation>

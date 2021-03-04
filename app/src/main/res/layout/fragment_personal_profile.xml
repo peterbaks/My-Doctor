@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PersonalProfileFragment">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Personal Profile"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_profile_icon"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/main"
+            android:textColor="@color/white"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            />
+
+
+        <TextView
+            android:id="@+id/fname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_bg"
+            android:text="First Name"
+
+            />
+
+        <TextView
+            android:id="@+id/lname"
+            android:layout_width="match_parent"
+            android:background="@drawable/edit_text_bg"
+            android:layout_height="wrap_content"
+            android:hint="Last Name" />
+
+
+        <TextView
+            android:id="@+id/surname"
+            android:layout_width="match_parent"
+            android:background="@drawable/edit_text_bg"
+            android:layout_height="wrap_content"
+            android:hint="Surname" />
+
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Email" />
+
+        <TextView
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:background="@drawable/edit_text_bg"
+            android:layout_height="wrap_content"
+            android:hint="Password" />
+
+        <TextView
+            android:id="@+id/d.o.b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Date Of Birth" />
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="match_parent"
+            android:background="@drawable/edit_text_bg"
+            android:layout_height="wrap_content"
+            android:hint="Age" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/nationality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_bg"
+                android:layout_weight="1"
+                android:hint="Nationality" />
+
+            <TextView
+                android:id="@+id/national_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_bg"
+                android:layout_weight="1"
+                android:hint="National ID" />
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/tel_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_bg"
+            android:hint="Tel No" />
+
+        <EditText
+            android:id="@+id/language"
+            android:layout_width="match_parent"
+            android:background="@drawable/edit_text_bg"
+            android:layout_height="wrap_content"
+            android:hint="Languages Fluent" />
+
+
+        <TextView
+            android:id="@+id/county"
+            android:layout_width="match_parent"
+            android:background="@drawable/edit_text_bg"
+            android:layout_height="wrap_content"
+            android:hint="County" />
+
+        <TextView
+            android:id="@+id/locality"
+            android:layout_width="match_parent"
+            android:background="@drawable/edit_text_bg"
+            android:layout_height="wrap_content"
+            android:hint="Locality" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnedit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Edit"
+                app:backgroundTint="@color/main"
+                android:textColor="@color/white"
+                android:layout_margin="20dp"
+                android:background="@drawable/button_curve"
+
+
+                />
+            <Button
+                android:id="@+id/btnupdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update"
+                app:backgroundTint="@color/main"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:layout_margin="20dp"
+                android:background="@drawable/button_curve"
+
+                />
+        </LinearLayout>
+        <Button
+            android:id="@+id/p.p_quit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Quit"
+            android:textColor="@color/white"
+            android:layout_margin="20dp"
+            app:backgroundTint="@color/main"/>
+
+    </LinearLayout>
+
+
+</ScrollView>
