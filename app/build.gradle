@@ -60,8 +60,10 @@ dependencies {
     //Timber
     implementation 'com.jakewharton.timber:timber:4.7.1'
 
-    //Carousel View
-    //implementation 'com.synnapps:carouselview:0.1.4'
+
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+    implementation 'com.android.volley:volley:1.1.1'
+
 
 
 
