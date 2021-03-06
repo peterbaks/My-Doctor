@@ -14,9 +14,7 @@ import com.example.navigationview.R;
 
 
 public class ScreenFive extends Fragment {
-
-
-
+    
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

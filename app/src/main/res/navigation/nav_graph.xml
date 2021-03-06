@@ -88,5 +88,11 @@
         android:id="@+id/updateMedicalProfileFragment"
         android:name="com.example.mydoctor.ui.fragments.UpdateMedicalProfileFragment"
         android:label="fragment_update_medical_profile"
-        tools:layout="@layout/fragment_update_medical_profile" />
+        tools:layout="@layout/fragment_update_medical_profile" >
+        <action
+            android:id="@+id/action_updateMedicalProfileFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/updateMedicalProfileFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

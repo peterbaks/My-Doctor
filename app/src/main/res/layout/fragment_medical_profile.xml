@@ -1,70 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="15dp"
     tools:context="com.example.mydoctor.ui.fragments.MedicalProfileFragment">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp"
-        tools:context=".MedicalBioDataActivity">
+        android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/textView20"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/medical_profile"
             android:layout_gravity="center"
-            android:textSize="20sp"
+            android:text="@string/medical_profile"
             android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            />
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/fname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/first_name"/>
+            android:hint="@string/first_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
         <EditText
             android:id="@+id/lname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Last Name" />
+            android:hint="Last Name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fname"/>
 
         <EditText
             android:id="@+id/surname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/surname" />
+            android:hint="@string/surname"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lname"/>
 
         <EditText
             android:id="@+id/d.o.b"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/date_of_birth"
-            android:autofillHints="d.o.b" />
+            android:autofillHints="d.o.b"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/surname"/>
 
         <EditText
             android:id="@+id/age"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/age" />
+            android:hint="@string/age"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/d.o.b"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Gender" />
+            android:text="Gender"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:id="@+id/gender_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/age"/>
 
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/gender_radio_group"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gender_txt">
 
             <RadioButton
                 android:id="@+id/male"
@@ -78,172 +106,247 @@
                 android:layout_height="wrap_content"
                 android:text="Female" />
         </RadioGroup>
+
         <EditText
             android:id="@+id/nationality"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nationality" />
+            android:hint="Nationality"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gender_radio_group"/>
 
         <EditText
             android:id="@+id/national_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="National ID" />
+            android:hint="National ID"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nationality"/>
+
 
         <EditText
             android:id="@+id/tel_no"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Tel No" />
+            android:hint="Tel No"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/national_id"/>
 
         <EditText
             android:id="@+id/language"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Languages Fluent" />
+            android:hint="Languages Fluent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tel_no"/>
 
         <EditText
             android:id="@+id/county"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="County" />
+            android:hint="County"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/language"/>
 
         <EditText
             android:id="@+id/locality"
             android:layout_width="match_parent"
             android:layout_height="41dp"
-            android:hint="Locality" />
+            android:hint="Locality"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/county"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Family section"
+            android:id="@+id/fam_section"
             android:textColor="#000"
             android:textAlignment="center"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locality"/>
 
         <EditText
             android:id="@+id/next_of_kin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Next Of Kin" />
+            android:hint="Next Of Kin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fam_section"/>
+
 
         <EditText
             android:id="@+id/gfname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Guardian First Name" />
+            android:hint="Guardian First Name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/next_of_kin"/>
+
+
         <EditText
             android:id="@+id/glname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Guardians Last Name" />
+            android:hint="Guardians Last Name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gfname"/>
 
         <EditText
             android:id="@+id/g_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Guardian ID" />
+            android:hint="Guardians National ID No"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/glname"/>
 
         <EditText
             android:id="@+id/guardian_phone_no"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Guardians Phone Number" />
+            android:hint="Guardians Phone Number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/g_id"/>
+
 
         <EditText
             android:id="@+id/G_locality"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Guardians Locality" />
+            android:hint="Guardians Locality"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guardian_phone_no"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/medical_data"
             android:textColor="#000"
+            android:id="@id/med_data"
             android:textAlignment="center"
             android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/G_locality"/>
+
         <EditText
             android:id="@+id/blood_group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Blood Group" />
+            android:hint="Blood Group"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/med_data"/>
 
         <EditText
             android:id="@+id/bloodpressure"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Blood pressure" />
+            android:hint="Blood pressure"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/blood_group"/>
 
         <EditText
             android:id="@+id/height"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Estimate Height in inches" />
+            android:hint="Estimate Height in inches"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bloodpressure"/>
+
 
         <EditText
             android:id="@+id/weight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Weight" />
+            android:hint="Weight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/height"/>
+
 
         <EditText
             android:id="@+id/existing_condition"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Existing Medical Condition" />
+            android:hint="Existing Medical Condition"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weight"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="HIV Status"
-            />
+            android:text="HIV/AIDs Status"
+            android:id="@+id/hiv_txt"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/existing_condition"/>
 
-        <CheckBox
+        <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/positive"
-            android:text="Positive"
-            android:textColor="#000"
+            android:orientation="horizontal"
+            android:id="@+id/hiv_radio_group"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hiv_txt">
 
+            <RadioButton
+                android:id="@+id/positive_hiv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male" />
 
-            />
-        <CheckBox
+            <RadioButton
+                android:id="@+id/negative_hiv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/mp_back"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/negative"
-            android:text="Negative"
-            android:textColor="#000"
+            android:text="@string/back"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hiv_radio_group"/>
 
-            />
-
-        <LinearLayout
+        <Button
+            android:id="@+id/save_medical_profile"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mp_back"/>
 
-            <Button
-                android:id="@+id/mp_back"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="40dp"
-                android:text="@string/back"
-                android:textColor="@android:color/white"
-                tools:ignore="InvalidId" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <Button
-                android:id="@+id/save_medical_profile"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_marginLeft="40dp"
-                android:layout_height="wrap_content"
-                android:text="Save"
-                android:textColor="@android:color/white"
-                tools:ignore="InvalidId" />
-        </LinearLayout>
-
-    </LinearLayout>
-</ScrollView>
+</androidx.core.widget.NestedScrollView>

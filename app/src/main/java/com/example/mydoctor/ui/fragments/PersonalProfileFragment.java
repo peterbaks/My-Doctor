@@ -40,6 +40,9 @@ public class PersonalProfileFragment extends Fragment {
         View view = binding.getRoot();
         setHasOptionsMenu(true);
 
+        binding.progressBar.setVisibility(View.VISIBLE);
+        binding.quit.setVisibility(View.INVISIBLE);
+
         databaseReference = FirebaseDatabase.getInstance().getReference("medical_profile");
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -73,6 +76,7 @@ public class PersonalProfileFragment extends Fragment {
     }
 
     private void fetchPersonalProfile(){
+
         databaseReference.child(firebaseAuth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -89,15 +93,17 @@ public class PersonalProfileFragment extends Fragment {
                     binding.language.setText("Languages fluent: "+profile.getLanguages_fluent());
                     binding.county.setText("County of Origin: "+profile.getCounty());
                     binding.locality.setText("Locality: "+profile.getLocality());
+
+                    binding.progressBar.setVisibility(View.INVISIBLE);
+                    binding.quit.setVisibility(View.VISIBLE);
                 }else{
                     Toast.makeText(requireContext(), "Data does not exist", Toast.LENGTH_SHORT).show();
+                    binding.progressBar.setVisibility(View.INVISIBLE);
                 }
             }
 
             @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
+            public void onCancelled(@NonNull DatabaseError error) { }
         });
     }
 }

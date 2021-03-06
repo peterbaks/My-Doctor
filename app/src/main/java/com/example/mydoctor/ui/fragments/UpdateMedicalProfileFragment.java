@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.mydoctor.model.Profile;
+import com.example.navigationview.R;
 import com.example.navigationview.databinding.FragmentUpdateMedicalProfileBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -40,6 +42,13 @@ public class UpdateMedicalProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 updateMedicalProfile();
+            }
+        });
+
+        binding.mpBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_updateMedicalProfileFragment_to_homeFragment);
             }
         });
 
@@ -117,5 +126,7 @@ public class UpdateMedicalProfileFragment extends Fragment {
         databaseReference.child(firebaseAuth.getCurrentUser().getUid()).child("hivStatus").setValue("binding.fname.getText().toString()");
 
         Toast.makeText(requireContext(), "Profile updated successfully", Toast.LENGTH_SHORT).show();
+
+        Navigation.findNavController(requireView()).navigate(R.id.action_updateMedicalProfileFragment_to_homeFragment);
     }
 }

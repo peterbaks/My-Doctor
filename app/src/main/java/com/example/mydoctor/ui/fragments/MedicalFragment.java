@@ -41,6 +41,9 @@ public class MedicalFragment extends Fragment {
         View view = binding.getRoot();
         setHasOptionsMenu(true);
 
+        binding.progressBar2.setVisibility(View.VISIBLE);
+        binding.mpBack.setVisibility(View.INVISIBLE);
+
         databaseReference = FirebaseDatabase.getInstance().getReference("medical_profile");
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -81,17 +84,22 @@ public class MedicalFragment extends Fragment {
                 if (snapshot.exists()){
                     Profile profile = snapshot.getValue(Profile.class);
 
-                    binding.nextOfKin.setText(profile.getNext_of_kin());
-                    binding.gfname.setText(profile.getGuardian_firstName());
-                    binding.glname.setText(profile.getGuardian_lastName());
-                    binding.gId.setText(profile.getGuardian_id());
-                    binding.guardianPhoneNo.setText(profile.getGuardian_phoneNum());
-                    binding.GLocality.setText(profile.getGuardian_locality());
-                    binding.bloodGroup.setText(profile.getBloodGroup());
-                    binding.bloodpressure.setText(profile.getBloodPressure());
-                    binding.height.setText(profile.getHeight());
-                    binding.weight.setText(profile.getWeight());
-                    binding.existingCondition.setText(profile.getExistingMedCondition());
+                    binding.nextOfKin.setText("Next of Kin: "+profile.getNext_of_kin());
+                    binding.gfname.setText("Guarding First Name: "+profile.getGuardian_firstName());
+                    binding.glname.setText("Guardian Last Name: "+profile.getGuardian_lastName());
+                    binding.gId.setText("Guarding ID No: "+profile.getGuardian_id());
+                    binding.guardianPhoneNo.setText("Guarding Phone No: "+profile.getGuardian_phoneNum());
+                    binding.GLocality.setText("Guardian Area of Locality: "+profile.getGuardian_locality());
+                    binding.bloodGroup.setText("Blood Group: "+profile.getBloodGroup());
+                    binding.bloodpressure.setText("Blood Pressure: "+profile.getBloodPressure());
+                    binding.height.setText("Estimate Height in inches: "+profile.getHeight());
+                    binding.weight.setText("Weight: "+profile.getWeight());
+                    binding.existingCondition.setText("Existing Medical Condition: "+profile.getExistingMedCondition());
+                    binding.hivAidStatus.setText("HIV/AIDs Status: "+profile.getHivStatus());
+
+                    binding.progressBar2.setVisibility(View.INVISIBLE);
+                    binding.mpBack.setVisibility(View.VISIBLE);
+
                 }else{
                     Toast.makeText(requireContext(), "Data does not exist", Toast.LENGTH_SHORT).show();
                 }
