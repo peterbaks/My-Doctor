@@ -4,163 +4,144 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mydoctor.contacts">
+    tools:context="com.example.mydoctor.ui.fragments.contacts">
 
-    <!-- TODO: Update blank fragment layout -->
 
     <ImageView
         android:id="@+id/whatsapp"
-        android:layout_width="41dp"
-        android:layout_height="59dp"
-        android:layout_marginBottom="80dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="227dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/twitter"
+        app:layout_constraintTop_toBottomOf="@+id/twitter"
         tools:src="@drawable/ic_whatsapp_svgrepo_com" />
 
     <ImageView
         android:id="@+id/twitter"
-        android:layout_width="41dp"
-        android:layout_height="59dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="28dp"
-        app:layout_constraintBottom_toTopOf="@+id/whatsapp"
-        app:layout_constraintEnd_toStartOf="@+id/textView15"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/instagram"
+        app:layout_constraintTop_toBottomOf="@+id/instagram"
         tools:src="@drawable/ic_twitter" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
-        android:layout_height="370dp"
+        android:layout_height="300dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/ic_contact_us" />
 
     <ImageView
         android:id="@+id/call"
-        android:layout_width="41dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="408dp"
-        android:layout_marginEnd="25dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView4"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/instagram"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
         tools:src="@drawable/ic_call" />
 
     <ImageView
         android:id="@+id/email"
-        android:layout_width="41dp"
-        android:layout_height="59dp"
-        app:layout_constraintBottom_toTopOf="@+id/telegram"
-        app:layout_constraintEnd_toStartOf="@+id/textView6"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/call"
         app:layout_constraintTop_toBottomOf="@+id/call"
-        app:layout_constraintVertical_bias="0.425"
         tools:src="@drawable/ic_gmail" />
 
     <ImageView
         android:id="@+id/telegram"
-        android:layout_width="41dp"
-        android:layout_height="59dp"
-        android:layout_marginBottom="80dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/email"
         tools:src="@drawable/ic_telegram" />
 
     <ImageView
         android:id="@+id/instagram"
-        android:layout_width="41dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="408dp"
-        android:layout_marginBottom="27dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.115"
-        tools:layout_editor_absoluteX="227dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/call"
+        app:layout_constraintTop_toTopOf="@+id/call"
         tools:src="@drawable/instagram_2" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="432dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginStart="8dp"
         android:text="Call"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
-        tools:layout_editor_absoluteX="70dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/call"
+        app:layout_constraintStart_toEndOf="@+id/call"
+        app:layout_constraintTop_toTopOf="@+id/call" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="62dp"
         android:layout_height="19dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="92dp"
+        android:layout_marginStart="8dp"
         android:text="Email us"
-        app:layout_constraintEnd_toStartOf="@+id/twitter"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintBottom_toBottomOf="@+id/email"
+        app:layout_constraintStart_toEndOf="@+id/email"
+        app:layout_constraintTop_toTopOf="@+id/email" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="96dp"
+        android:layout_marginStart="8dp"
         android:text="Telegram"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/whatsapp"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.45" />
+        app:layout_constraintBottom_toBottomOf="@+id/telegram"
+        app:layout_constraintStart_toEndOf="@+id/telegram"
+        app:layout_constraintTop_toTopOf="@+id/telegram" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="440dp"
+        android:layout_marginStart="8dp"
         android:text="Instagram"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintBottom_toBottomOf="@+id/instagram"
         app:layout_constraintStart_toEndOf="@+id/instagram"
-        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+        app:layout_constraintTop_toTopOf="@+id/instagram" />
 
     <TextView
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="44dp"
+        android:layout_marginStart="8dp"
         android:text="Tweeter"
-        app:layout_constraintBottom_toTopOf="@+id/textView16"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
-        app:layout_constraintVertical_bias="0.569" />
+        app:layout_constraintBottom_toBottomOf="@+id/twitter"
+        app:layout_constraintStart_toEndOf="@+id/twitter"
+        app:layout_constraintTop_toTopOf="@+id/twitter" />
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="108dp"
+        android:layout_marginStart="8dp"
         android:text="whatsapp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.585"
-        app:layout_constraintStart_toEndOf="@+id/whatsapp" />
+        app:layout_constraintBottom_toBottomOf="@+id/whatsapp"
+        app:layout_constraintStart_toEndOf="@+id/whatsapp"
+        app:layout_constraintTop_toTopOf="@+id/whatsapp" />
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="300dp"
-        android:layout_marginEnd="158dp"
-        android:layout_marginBottom="39dp"
-        android:background="@drawable/text_wrap"
+        android:layout_marginBottom="32dp"
         android:text="Any information updates will be recieved from our official platforms linked to this app"
         android:textAlignment="center"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

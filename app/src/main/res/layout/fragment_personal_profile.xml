@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mydoctor.PersonalProfileFragment">
+    tools:context="com.example.mydoctor.ui.fragments.PersonalProfileFragment">
 
 
 
@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="15dp">
+        android:padding="8dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -65,21 +65,6 @@
             android:layout_height="wrap_content"
             android:hint="Surname" />
 
-
-        <TextView
-            android:id="@+id/email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_bg"
-            android:hint="Email" />
-
-        <TextView
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:background="@drawable/edit_text_bg"
-            android:layout_height="wrap_content"
-            android:hint="Password" />
-
         <TextView
             android:id="@+id/d.o.b"
             android:layout_width="match_parent"
@@ -93,27 +78,21 @@
             android:background="@drawable/edit_text_bg"
             android:layout_height="wrap_content"
             android:hint="Age" />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+
             <TextView
                 android:id="@+id/nationality"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edit_text_bg"
-                android:layout_weight="1"
                 android:hint="Nationality" />
 
-            <TextView
-                android:id="@+id/national_id"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/edit_text_bg"
-                android:layout_weight="1"
-                android:hint="National ID" />
-        </LinearLayout>
 
-
+        <TextView
+            android:id="@+id/national_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_bg"
+            android:hint="National ID" />
 
         <TextView
             android:id="@+id/tel_no"
@@ -147,37 +126,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <Button
-                android:id="@+id/btnedit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Edit"
-                app:backgroundTint="@color/main"
-                android:textColor="@color/white"
-                android:layout_margin="20dp"
-                android:background="@drawable/button_curve"
-
-
-                />
-            <Button
-                android:id="@+id/btnupdate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Update"
-                app:backgroundTint="@color/main"
-                android:textColor="@color/white"
-                android:layout_weight="1"
-                android:layout_margin="20dp"
-                android:background="@drawable/button_curve"
-
-                />
         </LinearLayout>
         <Button
-            android:id="@+id/p.p_quit"
+            android:id="@+id/quit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="Quit"
             android:textColor="@color/white"
             android:layout_margin="20dp"

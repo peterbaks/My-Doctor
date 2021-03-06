@@ -13,30 +13,19 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name="com.example.mydoctor.AppController"
+        android:name="com.example.mydoctor.others.AppController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NavigationView">
-        <activity android:name="com.example.mydoctor.signUpActivity" />
-        <activity android:name="com.example.mydoctor.MainActivity" />
-        <activity android:name="com.example.mydoctor.signInActivity" />
-        <activity android:name="com.example.mydoctor.startActivity" />
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/.
-        -->
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyD1pqCXuTVMkomWmR89VOU78vdRCPY_mfI" />
+        <activity android:name="com.example.mydoctor.ui.activities.SignUpActivity" />
+        <activity android:name="com.example.mydoctor.ui.activities.MainActivity" />
+        <activity android:name="com.example.mydoctor.ui.activities.SignInActivity" />
+        <activity android:name="com.example.mydoctor.onboarding.ViewPagerActivity" />
 
-        <activity android:name="com.example.mydoctor.SplashScreen">
+        <activity android:name="com.example.mydoctor.ui.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context="com.example.mydoctor.PatientInputFragment">
+    tools:context="com.example.mydoctor.ui.fragments.PatientInputFragment">
 
     <TextView
         android:id="@+id/textView12"
