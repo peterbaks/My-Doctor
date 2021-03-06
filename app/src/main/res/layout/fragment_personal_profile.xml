@@ -1,189 +1,230 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mydoctor.PersonalProfileFragment">
+    tools:context="com.example.mydoctor.ui.fragments.PersonalProfileFragment">
 
-
-
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="15dp">
+        android:layout_height="match_parent">
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Personal Profile"
-            android:layout_gravity="center_horizontal"
-            android:textSize="20sp"
             android:textAlignment="center"
-            android:textColor="@color/black" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/profile_image"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="16dp"
             android:src="@drawable/ic_profile_icon"
-            />
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Upload"
-            android:layout_gravity="center_horizontal"
-            android:backgroundTint="@color/main"
-            android:textColor="@color/white"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
 
         <TextView
             android:id="@+id/fname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_bg"
-            android:text="First Name"
-
-            />
+            tools:text="First Name"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_image" />
 
         <TextView
             android:id="@+id/lname"
             android:layout_width="match_parent"
-            android:background="@drawable/edit_text_bg"
             android:layout_height="wrap_content"
-            android:hint="Last Name" />
-
+            tools:text="Last Name"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fname"/>
 
         <TextView
             android:id="@+id/surname"
             android:layout_width="match_parent"
-            android:background="@drawable/edit_text_bg"
             android:layout_height="wrap_content"
-            android:hint="Surname" />
-
-
-        <TextView
-            android:id="@+id/email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_bg"
-            android:hint="Email" />
-
-        <TextView
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:background="@drawable/edit_text_bg"
-            android:layout_height="wrap_content"
-            android:hint="Password" />
+            tools:text="Surname"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lname"/>
 
         <TextView
             android:id="@+id/d.o.b"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_bg"
-            android:hint="Date Of Birth" />
+            tools:text="Date Of Birth"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/surname"/>
 
         <TextView
             android:id="@+id/age"
             android:layout_width="match_parent"
-            android:background="@drawable/edit_text_bg"
             android:layout_height="wrap_content"
-            android:hint="Age" />
-        <LinearLayout
+            tools:text="Age"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/d.o.b"/>
+
+        <TextView
+            android:id="@+id/nationality"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/nationality"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/edit_text_bg"
-                android:layout_weight="1"
-                android:hint="Nationality" />
-
-            <TextView
-                android:id="@+id/national_id"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/edit_text_bg"
-                android:layout_weight="1"
-                android:hint="National ID" />
-        </LinearLayout>
+            android:layout_height="wrap_content"
+            tools:text="Nationality"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/age"/>
 
 
+        <TextView
+            android:id="@+id/national_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="National ID"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nationality"/>
 
         <TextView
             android:id="@+id/tel_no"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_bg"
-            android:hint="Tel No" />
+            tools:text="Tel No"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/national_id"/>
 
-        <EditText
+
+        <TextView
             android:id="@+id/language"
             android:layout_width="match_parent"
-            android:background="@drawable/edit_text_bg"
             android:layout_height="wrap_content"
-            android:hint="Languages Fluent" />
-
+            tools:text="Languages Fluent"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tel_no"/>
 
         <TextView
             android:id="@+id/county"
             android:layout_width="match_parent"
-            android:background="@drawable/edit_text_bg"
             android:layout_height="wrap_content"
-            android:hint="County" />
+            tools:text="County"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/language"/>
 
         <TextView
             android:id="@+id/locality"
             android:layout_width="match_parent"
-            android:background="@drawable/edit_text_bg"
             android:layout_height="wrap_content"
-            android:hint="Locality" />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <Button
-                android:id="@+id/btnedit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Edit"
-                app:backgroundTint="@color/main"
-                android:textColor="@color/white"
-                android:layout_margin="20dp"
-                android:background="@drawable/button_curve"
+            tools:text="Locality"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/county"/>
 
-
-                />
-            <Button
-                android:id="@+id/btnupdate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Update"
-                app:backgroundTint="@color/main"
-                android:textColor="@color/white"
-                android:layout_weight="1"
-                android:layout_margin="20dp"
-                android:background="@drawable/button_curve"
-
-                />
-        </LinearLayout>
         <Button
-            android:id="@+id/p.p_quit"
+            android:id="@+id/quit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="Quit"
             android:textColor="@color/white"
             android:layout_margin="20dp"
-            app:backgroundTint="@color/main"/>
+            app:backgroundTint="@color/main"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locality"/>
 
-    </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

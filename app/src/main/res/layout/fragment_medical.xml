@@ -1,299 +1,262 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    tools:context="com.example.mydoctor.MedicalProfileFragment">
+    android:padding="10dp"
+    tools:context="com.example.mydoctor.ui.fragments.MedicalProfileFragment">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/textView21"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp"
-        tools:context=".MedicalBioDataActivity">
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:text="Family section"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Medical Profile"
-            android:layout_gravity="center"
-            android:textSize="20sp"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            />
+    <TextView
+        android:id="@+id/next_of_kin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Next Of Kin"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
-        <TextView
-            android:id="@+id/fname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="First Name"
+    <TextView
+        android:id="@+id/gfname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Guardian First Name"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/next_of_kin"/>
 
-            />
+    <TextView
+        android:id="@+id/glname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Guardians Last Name"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gfname"/>
 
-        <TextView
-            android:id="@+id/lname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Last Name" />
-
-        <TextView
-            android:id="@+id/surname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/surname" />
-
-        <TextView
-            android:id="@+id/d.o.b"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/date_of_birth"
-            />
-
-
-
-        <TextView
-            android:id="@+id/age"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/age" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="gender" />
-        <TextView
-            android:id="@+id/sex"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="male"
-            android:textColor="@color/black"
-
-            />
-
-
-
-
-        <TextView
-            android:id="@+id/nationality"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Nationality" />
-
-        <TextView
-            android:id="@+id/national_id"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="National ID" />
+    <TextView
+        android:id="@+id/g_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Guardian ID"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/glname"/>
 
 
+    <TextView
+        android:id="@+id/guardian_phone_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Guardians Phone Number"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/g_id"/>
 
-        <TextView
-            android:id="@+id/tel_no"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tel No" />
-
-        <TextView
-            android:id="@+id/language"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Languages Fluent" />
-        <TextView
-            android:id="@+id/county"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="County" />
-
-        <TextView
-            android:id="@+id/locality"
-            android:layout_width="match_parent"
-            android:layout_height="41dp"
-            android:text="Locality" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Family section"
-            android:textColor="#000"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
-
-        <TextView
-            android:id="@+id/next_of_kin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Next Of Kin" />
-
-        <TextView
-            android:id="@+id/gfname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Guardian First Name" />
-        <TextView
-            android:id="@+id/glname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Guardians Last Name" />
-
-        <TextView
-            android:id="@+id/g_id"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Guardian ID" />
-
-        <TextView
-            android:id="@+id/guardian_phone_no"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Guardians Phone Number" />
-
-        <TextView
-            android:id="@+id/G_locality"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Guardians Locality" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Medical Data"
-            android:textColor="#000"
-            android:textAlignment="center"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+    <TextView
+        android:id="@+id/G_locality"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Guardians Locality"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guardian_phone_no"/>
 
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Medical Data"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textStyle="bold"
+        android:id="@+id/medic_data"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/G_locality"/>
 
-        />
-        <TextView
-            android:id="@+id/blood_group"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Blood Group" />
+    <TextView
+        android:id="@+id/blood_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Blood Group"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medic_data"/>
 
-        <TextView
-            android:id="@+id/b.p"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Blood pressure" />
+    <TextView
+        android:id="@+id/bloodpressure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Blood pressure"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blood_group"/>
 
-        <TextView
-            android:id="@+id/height"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Estimate Height in inches" />
+    <TextView
+        android:id="@+id/height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Estimate Height in inches"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bloodpressure"/>
 
-        <TextView
-            android:id="@+id/weight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Weight" />
+    <TextView
+        android:id="@+id/weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Weight"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/height"/>
 
-        <TextView
-            android:id="@+id/existing_condition"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Existing Medical Condition" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="HIV Status"
-            />
+    <TextView
+        android:id="@+id/existing_condition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Existing Medical Condition"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weight"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/positive"
-            android:text="Positive"
-            android:textColor="#000"
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="HIV Status"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:id="@+id/hiv_aid_status"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/existing_condition"/>
 
-            />
+    <Button
+        android:id="@+id/mp_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quit"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hiv_aid_status"/>
 
-
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Patient Input"
-            android:textColor="#000"
-            android:textAlignment="center"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
-
-
-        <TextView
-            android:id="@+id/patient_syptoms_output"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="symptoms" />
-        <TextView
-            android:id="@+id/period"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Period"
-            tools:ignore="InvalidId" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/existing_condition_output"
-            android:text="Existing medical condition"
-            android:textColor="#000"/>
-
-
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Diagnosis"
-            android:textColor="#000"
-            android:textAlignment="center"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
-
-
-        <TextView
-            android:id="@+id/disease"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Disease" />
-        <TextView
-            android:id="@+id/prescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="prescription"
-            tools:ignore="InvalidId" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/caution"
-            android:text="Caution"
-            android:textColor="#000"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-
-            <Button
-                android:id="@+id/mp_back"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="40dp"
-                android:text="Quit"
-                android:textColor="@android:color/white"
-                tools:ignore="InvalidId" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-</ScrollView>
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,42 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mydoctor.DiscoveryFragment">
+    tools:context="com.example.mydoctor.ui.fragments.DiscoveryFragment">
 
-
-    <ImageView
-        android:id="@+id/imageView2"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_marginTop="8dp"
-        android:src="@drawable/applehand"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:text=" simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        android:padding="15dp"
+        android:text="
+Goose bumps evolved to make our ancestors’ hair stand up, making them appear more threatening to predators.\n\n
+Wisdom teeth serve no purpose. They’re left over from hundreds of thousands of years ago. As early humans’ brains grew bigger, it reduced space in the mouth, crowding out this third set of molars.\n\n
+Scientists aren't exactly sure why we yawn, but it may help regulate body temperature.\n\n
+Your fingernails don’t actually grow after you’re dead.\n\n
+If they were laid end to end, all of the blood vessels in the human body would encircle the Earth four times.\n\n
+Humans are the only animals with chins.\n\n
+As you breathe, most of the air is going in and out of one nostril. Every few hours, the workload shifts to the other nostril.\n\n
+Blood makes up about 8 percent of your total body weight.\n\n
+The human nose can detect about 1 trillion smells.\n\n
+You have two kidneys, but only one is necessary to live.\n\n
+Belly buttons grow special hairs to catch lint.\n\n
+The satisfying sound of cracking your knuckles comes from gas bubbles bursting in your joints.\n\n
+Skin is the body’s largest organ and can comprise 15 percent of a person’s total weight.\n\n
+Thumbs have their own pulse.\n\n
+Your tongue is made up of eight interwoven muscles, similar in structure to an elephant’s trunk or an octopus’s tentacle.\n\n
+On a genetic level, all human beings are more than 99 percent identical.\n\n
+The foot is one of the most ticklish parts of the body.\n\n
+Extraocular muscles in the eye are the body’s fastest muscles. They allow both of your eyes to flick in the same direction in a single 50-millisecond movement.\n\n
+A surgical procedure called a selective amygdalohippocampectomy removes half of the brain’s amygdala—and with it, the patient’s sense of fear.\n\n
+The pineal gland, which secretes the hormone melatonin, got its name from its shape, which resembles a pine nut.\n\n
+Hair grows fast—about 6 inches per year. The only thing in the body that grows faster is bone marrow.\n\n
+No one really knows what fingerprints are for, but they might help wick water away from our hands, prevent blisters, or improve touch.\n\n
+The heart beats more than 3 billion times in the average human lifespan.\n\n
+Blushing is caused by a rush of adrenaline.\n\n"
+        android:textSize="16sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Read More..."
-        android:textStyle="italic"
-        android:textColor="@color/purple_700"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

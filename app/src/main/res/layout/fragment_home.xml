@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_alignParentTop="true"
     android:orientation="vertical"
-    tools:context="com.example.mydoctor.HomeFragment">
+    tools:context="com.example.mydoctor.ui.fragments.HomeFragment">
 
 
     <TextView
@@ -41,7 +41,7 @@
         android:text="Welcome to your favourite Home doctor. its our delight to serve you and offer you the bestmedical care to our best. To offer maximum Quality service, Create a MEDICAL PROFILE by clicking the button below:"
         android:textColor="#000"
         android:textAlignment="center"
-        android:textSize="14sp"
+        android:textSize="12sp"
         android:textStyle="italic" />
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
@@ -58,6 +58,7 @@
             android:text="Create medical profile"
             android:textColor="#fff"
             android:padding="10dp"
+            android:textSize="12sp"
             app:cornerRadius="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -79,6 +80,7 @@
             android:text="Update medical profile"
             android:textColor="#fff"
             android:padding="10dp"
+            android:textSize="12sp"
             app:cornerRadius="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
