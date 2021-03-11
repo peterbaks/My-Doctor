@@ -87,7 +87,9 @@ public class SignUpActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             userID = firebaseAuth.getUid();
                             saveUserDetails(mail, first_Name, last_Name, phone_Number);
-                            //Navigation.findNavController(v).navigate(R.id.action_registerFragment_to_loginFragment);
+                            Intent intent = new Intent(SignUpActivity.this,SignInActivity.class);
+                            startActivity(intent);
+                            finish();
                             Toast.makeText(SignUpActivity.this, "Welcome", Toast.LENGTH_SHORT).show();
                             binding.registerProgressBar.setVisibility(View.INVISIBLE);
                         } else {

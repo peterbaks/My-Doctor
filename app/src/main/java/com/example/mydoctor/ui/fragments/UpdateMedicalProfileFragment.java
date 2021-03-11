@@ -63,6 +63,10 @@ public class UpdateMedicalProfileFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()){
                     Profile profile = snapshot.getValue(Profile.class);
+                    assert profile != null;
+                    Timber.d(profile.getFirstName());
+                    Toast.makeText(requireContext(), ""+profile.getFirstName(), Toast.LENGTH_SHORT).show();
+                    binding.progressBar4.setVisibility(View.INVISIBLE);
                     binding.fname.setText(profile.getFirstName());
                     binding.lname.setText(profile.getLastName());
                     binding.surname.setText(profile.getSurname());
@@ -89,6 +93,7 @@ public class UpdateMedicalProfileFragment extends Fragment {
                     Timber.d(profile.getFirstName());
                 }else{
                     Toast.makeText(requireContext(), "Data does not exist", Toast.LENGTH_SHORT).show();
+                    binding.progressBar4.setVisibility(View.INVISIBLE);
                 }
             }
 

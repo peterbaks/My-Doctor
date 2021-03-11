@@ -36,7 +36,9 @@
         tools:layout="@layout/fragment_success">
         <action
             android:id="@+id/action_successFragment_to_patientInputFragment"
-            app:destination="@id/patientInputFragment" />
+            app:destination="@id/patientInputFragment"
+            app:popUpTo="@id/successFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/nearestFragment"
@@ -78,7 +80,7 @@
     <fragment
         android:id="@+id/patientInputFragment"
         android:name="com.example.mydoctor.ui.fragments.PatientInputFragment"
-        android:label="Patient Input"
+        android:label="Patient Diagnosis"
         tools:layout="@layout/fragment_patient_input">
         <action
             android:id="@+id/action_patientInputFragment_to_patientDiagnosisFragment"
@@ -92,13 +94,13 @@
     <fragment
         android:id="@+id/contacts"
         android:name="com.example.mydoctor.ui.fragments.contacts"
-        android:label="fragment_contacts"
+        android:label="Contacts"
         tools:layout="@layout/fragment_contacts" />
     <fragment
         android:id="@+id/updateMedicalProfileFragment"
         android:name="com.example.mydoctor.ui.fragments.UpdateMedicalProfileFragment"
-        android:label="fragment_update_medical_profile"
-        tools:layout="@layout/fragment_update_medical_profile" >
+        android:label="Update Medical Profile"
+        tools:layout="@layout/fragment_update_medical_profile">
         <action
             android:id="@+id/action_updateMedicalProfileFragment_to_homeFragment"
             app:destination="@id/homeFragment"
