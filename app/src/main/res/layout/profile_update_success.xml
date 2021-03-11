@@ -29,7 +29,7 @@
         app:srcCompat="@drawable/success" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonSuccess"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
