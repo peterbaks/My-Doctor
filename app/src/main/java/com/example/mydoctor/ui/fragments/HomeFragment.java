@@ -71,8 +71,8 @@ public class HomeFragment extends Fragment {
         updateMp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Navigation.findNavController(v).navigate(R.id.action_homeFragment_to_updateMedicalProfileFragment);
-                Navigation.findNavController(v).navigate(R.id.action_homeFragment_to_patientInputFragment);
+                Navigation.findNavController(v).navigate(R.id.action_homeFragment_to_updateMedicalProfileFragment);
+                //Navigation.findNavController(v).navigate(R.id.action_homeFragment_to_patientInputFragment);
             }
         });
 

@@ -18,5 +18,5 @@ public interface DiseasesDao {
 
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    public void insert(Diseases diseases);
+    void insert(Diseases diseases);
 }

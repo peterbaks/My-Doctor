@@ -127,6 +127,6 @@ public class UpdateMedicalProfileFragment extends Fragment {
 
         Toast.makeText(requireContext(), "Profile updated successfully", Toast.LENGTH_SHORT).show();
 
-        Navigation.findNavController(requireView()).navigate(R.id.action_updateMedicalProfileFragment_to_homeFragment);
+        Navigation.findNavController(requireView()).navigate(R.id.action_updateMedicalProfileFragment_to_successFragment);
     }
 }
