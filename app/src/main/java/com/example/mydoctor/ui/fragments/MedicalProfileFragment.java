@@ -42,6 +42,85 @@ public class MedicalProfileFragment extends Fragment {
         binding.saveMedicalProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(binding.fname.getText().toString().isEmpty()){
+                    binding.fname.setError("Required");
+                }
+                else if (binding.lname.getText().toString().isEmpty()){
+                    binding.lname.setError("Required");
+                }
+                else if (binding.surname.getText().toString().isEmpty()){
+                    binding.surname.setError("Required");
+                }
+                else if (binding.dob.getText().toString().isEmpty()){
+                    binding. dob.setError("Required");
+                }
+                else if (binding.age.getText().toString().isEmpty()){
+                    binding.age.setError("Required");
+                }
+                else if (binding.male.getText().toString().isEmpty()){
+                    binding.male.setError("Required");
+                }
+                else if (binding.female.getText().toString().isEmpty()){
+                    binding.female.setError("Required");
+                }
+                else if (binding.nationality.getText().toString().isEmpty()){
+                    binding.nationality.setError("Required");
+                }
+                else if (binding.nationalId.getText().toString().isEmpty()){
+                    binding.nationalId.setError("Required");
+                }
+                else if (binding.telNo.getText().toString().isEmpty()){
+                    binding.telNo.setError("Required");
+                }
+                else if (binding.language.getText().toString().isEmpty()){
+                    binding.language.setError("Required");
+                }
+                else if (binding.county.getText().toString().isEmpty()){
+                    binding.county.setError("Required");
+                }
+                else if (binding.locality.getText().toString().isEmpty()){
+                    binding.locality.setError("Required");
+                }
+                else if (binding.gfname.getText().toString().isEmpty()){
+                    binding.gfname.setError("Required");
+                }
+                else if (binding.nextOfKin.getText().toString().isEmpty()){
+                    binding.nextOfKin.setError("Required");
+                }
+                else if (binding.glname.getText().toString().isEmpty()){
+                    binding.glname.setError("Required");
+                }
+                else if (binding.gId.getText().toString().isEmpty()){
+                    binding.gId.setError("Required");
+                }
+                else if (binding.guardianPhoneNo.getText().toString().isEmpty()){
+                    binding.guardianPhoneNo.setError("Required");
+                }
+                else if (binding.gLocality.getText().toString().isEmpty()){
+                    binding.gLocality.setError("Required");
+                }
+                else if (binding.bloodGroup.getText().toString().isEmpty()){
+                    binding.bloodGroup.setError("Required");
+                }
+                else if (binding.bloodpressure.getText().toString().isEmpty()){
+                    binding.bloodpressure.setError("Required");
+                }
+                else if (binding.height.getText().toString().isEmpty()){
+                    binding.height.setError("Required");
+                }
+                else if (binding.weight.getText().toString().isEmpty()){
+                    binding.weight.setError("Required");
+                }
+                else if (binding.existingCondition.getText().toString().isEmpty()){
+                    binding.existingCondition.setError("Required");
+                }
+                else if (binding.positiveHiv.getText().toString().isEmpty()){
+                    binding.positiveHiv.setError("Required");
+                }
+                else if (binding.negativeHiv.getText().toString().isEmpty()){
+                    binding.negativeHiv.setError("Required");
+                }
+                else
                 createMedicalProfile();
                 Navigation.findNavController(v).navigate(R.id.action_medicalProfileFragment_to_successFragment);
             }
@@ -69,7 +148,7 @@ public class MedicalProfileFragment extends Fragment {
                 binding.fname.getText().toString(),
                 binding.lname.getText().toString(),
                 binding.surname.getText().toString(),
-                binding.dOB.getText().toString(),
+                binding.dob.getText().toString(),
                 binding.age.getText().toString(),
                 "binding.fname.getText().toString()",
                 binding.nationality.getText().toString(),
@@ -83,7 +162,7 @@ public class MedicalProfileFragment extends Fragment {
                 binding.glname.getText().toString(),
                 binding.gId.getText().toString(),
                 binding.guardianPhoneNo.getText().toString(),
-                binding.GLocality.getText().toString(),
+                binding.gLocality.getText().toString(),
                 binding.bloodGroup.getText().toString(),
                 binding.bloodpressure.getText().toString(),
                 binding.height.getText().toString(),

@@ -41,6 +41,85 @@ public class UpdateMedicalProfileFragment extends Fragment {
         binding.saveMedicalProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(binding.fname.getText().toString().isEmpty()){
+                    binding.fname.setError("Required");
+                }
+                else if (binding.lname.getText().toString().isEmpty()){
+                    binding.lname.setError("Required");
+                }
+                else if (binding.surname.getText().toString().isEmpty()){
+                    binding.surname.setError("Required");
+                }
+                else if (binding.dob.getText().toString().isEmpty()){
+                    binding. dob.setError("Required");
+                }
+                else if (binding.age.getText().toString().isEmpty()){
+                    binding.age.setError("Required");
+                }
+                else if (binding.male.getText().toString().isEmpty()){
+                    binding.male.setError("Required");
+                }
+                else if (binding.female.getText().toString().isEmpty()){
+                    binding.female.setError("Required");
+                }
+                else if (binding.nationality.getText().toString().isEmpty()){
+                    binding.nationality.setError("Required");
+                }
+                else if (binding.nationalId.getText().toString().isEmpty()){
+                    binding.nationalId.setError("Required");
+                }
+                else if (binding.telNo.getText().toString().isEmpty()){
+                    binding.telNo.setError("Required");
+                }
+                else if (binding.language.getText().toString().isEmpty()){
+                    binding.language.setError("Required");
+                }
+                else if (binding.county.getText().toString().isEmpty()){
+                    binding.county.setError("Required");
+                }
+                else if (binding.locality.getText().toString().isEmpty()){
+                    binding.locality.setError("Required");
+                }
+                else if (binding.gfname.getText().toString().isEmpty()){
+                    binding.gfname.setError("Required");
+                }
+                else if (binding.nextOfKin.getText().toString().isEmpty()){
+                    binding.nextOfKin.setError("Required");
+                }
+                else if (binding.glname.getText().toString().isEmpty()){
+                    binding.glname.setError("Required");
+                }
+                else if (binding.gId.getText().toString().isEmpty()){
+                    binding.gId.setError("Required");
+                }
+                else if (binding.guardianPhoneNo.getText().toString().isEmpty()){
+                    binding.guardianPhoneNo.setError("Required");
+                }
+                else if (binding.gLocality.getText().toString().isEmpty()){
+                    binding.gLocality.setError("Required");
+                }
+                else if (binding.bloodGroup.getText().toString().isEmpty()){
+                    binding.bloodGroup.setError("Required");
+                }
+                else if (binding.bloodpressure.getText().toString().isEmpty()){
+                    binding.bloodpressure.setError("Required");
+                }
+                else if (binding.height.getText().toString().isEmpty()){
+                    binding.height.setError("Required");
+                }
+                else if (binding.weight.getText().toString().isEmpty()){
+                    binding.weight.setError("Required");
+                }
+                else if (binding.existingCondition.getText().toString().isEmpty()){
+                    binding.existingCondition.setError("Required");
+                }
+                else if (binding.positiveHiv.getText().toString().isEmpty()){
+                    binding.positiveHiv.setError("Required");
+                }
+                else if (binding.negativeHiv.getText().toString().isEmpty()){
+                    binding.negativeHiv.setError("Required");
+                }
+                else
                 updateMedicalProfile();
             }
         });
@@ -70,7 +149,7 @@ public class UpdateMedicalProfileFragment extends Fragment {
                     binding.fname.setText(profile.getFirstName());
                     binding.lname.setText(profile.getLastName());
                     binding.surname.setText(profile.getSurname());
-                    binding.dOB.setText(profile.getDob());
+                    binding.dob.setText(profile.getDob());
                     binding.age.setText(profile.getAge());
                     binding.nationality.setText(profile.getNationality());
                     binding.nationalId.setText(profile.getNation_id());
@@ -83,7 +162,7 @@ public class UpdateMedicalProfileFragment extends Fragment {
                     binding.glname.setText(profile.getGuardian_lastName());
                     binding.gId.setText(profile.getGuardian_id());
                     binding.guardianPhoneNo.setText(profile.getGuardian_phoneNum());
-                    binding.GLocality.setText(profile.getGuardian_locality());
+                    binding.gLocality.setText(profile.getGuardian_locality());
                     binding.bloodGroup.setText(profile.getBloodGroup());
                     binding.bloodpressure.setText(profile.getBloodPressure());
                     binding.height.setText(profile.getHeight());
@@ -108,7 +187,7 @@ public class UpdateMedicalProfileFragment extends Fragment {
         databaseReference.child(firebaseAuth.getCurrentUser().getUid()).child("firstName").setValue(binding.fname.getText().toString());
         databaseReference.child(firebaseAuth.getCurrentUser().getUid()).child("lastName").setValue(binding.lname.getText().toString());
         databaseReference.child(firebaseAuth.getCurrentUser().getUid()).child("surname").setValue(binding.surname.getText().toString());
-        databaseReference.child(firebaseAuth.getCurrentUser().getUid()).child("dob").setValue(binding.dOB.getText().toString());
+        databaseReference.child(firebaseAuth.getCurrentUser().getUid()).child("dob").setValue(binding.dob.getText().toString());
         databaseReference.child(firebaseAuth.getCurrentUser().getUid()).child("age").setValue(binding.age.getText().toString());
         databaseReference.child(firebaseAuth.getCurrentUser().getUid()).child("gender").setValue("binding.fname.getText().toString()");
         databaseReference.child(firebaseAuth.getCurrentUser().getUid()).child("nationality").setValue(binding.nationality.getText().toString());
@@ -122,7 +201,7 @@ public class UpdateMedicalProfileFragment extends Fragment {
         databaseReference.child(firebaseAuth.getCurrentUser().getUid()).child("guardian_firstName").setValue(binding.gfname.getText().toString());
         databaseReference.child(firebaseAuth.getCurrentUser().getUid()).child("guardian_lastName").setValue(binding.glname.getText().toString());
         databaseReference.child(firebaseAuth.getCurrentUser().getUid()).child("guardian_phoneNum").setValue( binding.guardianPhoneNo.getText().toString());
-        databaseReference.child(firebaseAuth.getCurrentUser().getUid()).child("guardian_locality").setValue( binding.GLocality.getText().toString());
+        databaseReference.child(firebaseAuth.getCurrentUser().getUid()).child("guardian_locality").setValue( binding.gLocality.getText().toString());
         databaseReference.child(firebaseAuth.getCurrentUser().getUid()).child("bloodGroup").setValue(binding.bloodGroup.getText().toString());
         databaseReference.child(firebaseAuth.getCurrentUser().getUid()).child("bloodPressure").setValue(binding.bloodpressure.getText().toString());
         databaseReference.child(firebaseAuth.getCurrentUser().getUid()).child("height").setValue(binding.height.getText().toString());

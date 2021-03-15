@@ -11,67 +11,74 @@
         android:id="@+id/whatsapp"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:clickable="true"
         android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="@+id/twitter"
-        app:layout_constraintTop_toBottomOf="@+id/twitter"
-        tools:src="@drawable/ic_whatsapp_svgrepo_com" />
+        app:layout_constraintStart_toStartOf="@+id/facebook"
+        app:layout_constraintTop_toBottomOf="@+id/facebook"
+        android:src="@drawable/ic_whatsapp_svgrepo_com" />
 
     <ImageView
-        android:id="@+id/twitter"
+        android:id="@+id/facebook"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:clickable="true"
         android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="@+id/instagram"
         app:layout_constraintTop_toBottomOf="@+id/instagram"
-        tools:src="@drawable/ic_twitter" />
+        android:src="@drawable/facebook_f_ico" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="300dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/ic_contact_us" />
+        android:src="@drawable/ic_contact_us" />
 
     <ImageView
         android:id="@+id/call"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:clickable="true"
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toStartOf="@+id/instagram"
         app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        tools:src="@drawable/ic_call" />
+        android:src="@drawable/ic_call" />
 
     <ImageView
         android:id="@+id/email"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:clickable="true"
         android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="@+id/call"
         app:layout_constraintTop_toBottomOf="@+id/call"
-        tools:src="@drawable/ic_gmail" />
+        android:src="@drawable/ic_gmail" />
 
     <ImageView
         android:id="@+id/telegram"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:clickable="true"
         android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="@+id/email"
         app:layout_constraintTop_toBottomOf="@+id/email"
-        tools:src="@drawable/ic_telegram" />
+        android:src="@drawable/ic_telegram" />
 
     <ImageView
         android:id="@+id/instagram"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/call"
         app:layout_constraintTop_toTopOf="@+id/call"
-        tools:src="@drawable/instagram_2" />
+        android:src="@drawable/instagram_2" />
 
     <TextView
         android:id="@+id/textView4"
@@ -114,14 +121,14 @@
         app:layout_constraintTop_toTopOf="@+id/instagram" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/facebooktextview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Tweeter"
-        app:layout_constraintBottom_toBottomOf="@+id/twitter"
-        app:layout_constraintStart_toEndOf="@+id/twitter"
-        app:layout_constraintTop_toTopOf="@+id/twitter" />
+        android:text="facebook"
+        app:layout_constraintBottom_toBottomOf="@+id/facebook"
+        app:layout_constraintStart_toEndOf="@+id/facebook"
+        app:layout_constraintTop_toTopOf="@+id/facebook" />
 
     <TextView
         android:id="@+id/textView16"

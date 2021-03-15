@@ -58,7 +58,7 @@
             app:layout_constraintTop_toBottomOf="@+id/lname"/>
 
         <EditText
-            android:id="@+id/d.o.b"
+            android:id="@+id/dob"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/date_of_birth"
@@ -76,7 +76,7 @@
             android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/d.o.b"/>
+            app:layout_constraintTop_toBottomOf="@+id/dob"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -229,6 +229,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/glname"/>
 
+
         <EditText
             android:id="@+id/guardian_phone_no"
             android:layout_width="match_parent"
@@ -236,12 +237,12 @@
             android:hint="Guardians Phone Number"
             android:inputType="phone"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/g_id"/>
-
+            app:layout_constraintTop_toBottomOf="@+id/g_id" />
 
         <EditText
-            android:id="@+id/G_locality"
+            android:id="@+id/g_locality"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Guardians Locality"
@@ -261,7 +262,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/G_locality"/>
+            app:layout_constraintTop_toBottomOf="@+id/g_locality"/>
 
         <EditText
             android:id="@+id/blood_group"
@@ -351,7 +352,7 @@
 
         <Button
             android:id="@+id/mp_back"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/back"
             android:textColor="@android:color/white"
@@ -361,7 +362,7 @@
 
         <Button
             android:id="@+id/save_medical_profile"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Save"
             android:textColor="@android:color/white"

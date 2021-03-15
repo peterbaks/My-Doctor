@@ -89,7 +89,7 @@ public class MedicalFragment extends Fragment {
                     binding.glname.setText("Guardian Last Name: "+profile.getGuardian_lastName());
                     binding.gId.setText("Guarding ID No: "+profile.getGuardian_id());
                     binding.guardianPhoneNo.setText("Guarding Phone No: "+profile.getGuardian_phoneNum());
-                    binding.GLocality.setText("Guardian Area of Locality: "+profile.getGuardian_locality());
+                    binding.gLocality.setText("Guardian Area of Locality: "+profile.getGuardian_locality());
                     binding.bloodGroup.setText("Blood Group: "+profile.getBloodGroup());
                     binding.bloodpressure.setText("Blood Pressure: "+profile.getBloodPressure());
                     binding.height.setText("Estimate Height in inches: "+profile.getHeight());

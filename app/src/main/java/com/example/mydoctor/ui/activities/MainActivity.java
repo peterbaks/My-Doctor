@@ -19,6 +19,8 @@ import com.example.navigationview.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
+import static com.example.navigationview.R.id.fragment2;
+
 public class MainActivity extends AppCompatActivity {
 
     private NavController navController;
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView mBottomNavigationView = findViewById(R.id.bottomNavigationView);
         DrawerLayout mDrawer = findViewById(R.id.drawerLayout);
         NavigationView mNavigationView = findViewById(R.id.navigationView);
-        navController = Navigation.findNavController(this,R.id.fragment2);
+        navController = Navigation.findNavController(this, R.id.fragment2);
 
         //setup bottom navigation
         NavigationUI.setupWithNavController(mBottomNavigationView,navController);

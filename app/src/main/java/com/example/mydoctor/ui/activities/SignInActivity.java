@@ -46,18 +46,28 @@ public class SignInActivity extends AppCompatActivity {
                     binding.passwordEditText.setError("Field can't be empty!!");
                     return;
                 } else {
-                    binding.registerProgressBar.setVisibility(View.VISIBLE);
+                    binding.signinProgressbar.setVisibility(View.VISIBLE);
                 }
 
                 firebaseAuth.signInWithEmailAndPassword(mail, passwd).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+
                         if (task.isSuccessful()){
-                            Intent intent = new Intent(SignInActivity.this, MainActivity.class);
-                            startActivity(intent);
-                            Toast.makeText(SignInActivity.this, "welcome", Toast.LENGTH_LONG).show();
+                            if(firebaseAuth.getCurrentUser().isEmailVerified()){
+                                Intent intent = new Intent(SignInActivity.this, MainActivity.class);
+                                startActivity(intent);
+                                Toast.makeText(SignInActivity.this, "welcome", Toast.LENGTH_LONG).show();
+                            }
+                            else
+                            {
+                                Toast.makeText(SignInActivity.this, "Verify your email first", Toast.LENGTH_LONG).show();
+                                binding.emailEditText.setText("");
+                                binding.passwordEditText.setText("");
+                                binding.signinProgressbar.setVisibility(View.INVISIBLE);
+                            }
                         }else{
-                            binding.registerProgressBar.setVisibility(View.INVISIBLE);
+                            binding.signinProgressbar.setVisibility(View.INVISIBLE);
                             Toast.makeText(SignInActivity.this, ""+ task.getException(), Toast.LENGTH_SHORT).show();
                         }
                     }

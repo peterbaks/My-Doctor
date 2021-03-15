@@ -107,7 +107,7 @@
         app:layout_constraintTop_toBottomOf="@+id/g_id"/>
 
     <TextView
-        android:id="@+id/G_locality"
+        android:id="@+id/g_locality"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:text="Guardians Locality"
@@ -138,7 +138,7 @@
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/G_locality"/>
+        app:layout_constraintTop_toBottomOf="@+id/g_locality"/>
 
     <TextView
         android:id="@+id/blood_group"
@@ -238,16 +238,17 @@
 
     <Button
         android:id="@+id/mp_back"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quit"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="160dp"
         android:layout_marginEnd="16dp"
+        android:text="Quit"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hiv_aid_status"/>
+        app:layout_constraintTop_toBottomOf="@+id/hiv_aid_status" />
 
     <ProgressBar
         android:id="@+id/progressBar2"
@@ -259,4 +260,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="61dp"
+        android:layout_height="52dp"
+        app:layout_constraintBottom_toTopOf="@+id/mp_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.874"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hiv_aid_status"
+        tools:src="@drawable/ic_download" />
 </androidx.constraintlayout.widget.ConstraintLayout>

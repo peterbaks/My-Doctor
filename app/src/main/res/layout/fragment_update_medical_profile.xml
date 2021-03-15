@@ -65,7 +65,7 @@
             app:layout_constraintTop_toBottomOf="@+id/lname"/>
 
         <EditText
-            android:id="@+id/d.o.b"
+            android:id="@+id/dob"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/date_of_birth"
@@ -81,7 +81,7 @@
             android:hint="@string/age"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/d.o.b"/>
+            app:layout_constraintTop_toBottomOf="@+id/dob"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -96,11 +96,13 @@
             app:layout_constraintTop_toBottomOf="@+id/age"/>
 
         <RadioGroup
+            android:id="@+id/gender_radio_group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:orientation="horizontal"
-            android:id="@+id/gender_radio_group"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/gender_txt">
 
@@ -121,10 +123,12 @@
             android:id="@+id/nationality"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:hint="Nationality"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/gender_radio_group"/>
+            app:layout_constraintTop_toBottomOf="@+id/gender_radio_group" />
 
         <EditText
             android:id="@+id/national_id"
@@ -235,7 +239,7 @@
 
 
         <EditText
-            android:id="@+id/G_locality"
+            android:id="@+id/g_locality"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Guardians Locality"
@@ -254,7 +258,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/G_locality"/>
+            app:layout_constraintTop_toBottomOf="@+id/g_locality"/>
 
         <EditText
             android:id="@+id/blood_group"

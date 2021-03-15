@@ -85,7 +85,7 @@ public class PersonalProfileFragment extends Fragment {
                     binding.fname.setText("First Name: "+profile.getFirstName());
                     binding.lname.setText("Last Name: "+profile.getLastName());
                     binding.surname.setText("Surname: "+profile.getSurname());
-                    binding.dOB.setText("Date of Birth: "+profile.getDob());
+                    binding.dob.setText("Date of Birth: "+profile.getDob());
                     binding.age.setText("Age: "+profile.getAge());
                     binding.nationality.setText("Nationality: "+profile.getNationality());
                     binding.nationalId.setText("National ID: "+profile.getNation_id());
