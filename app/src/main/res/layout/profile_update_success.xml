@@ -10,10 +10,11 @@
         android:id="@+id/MPsuccess"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="Medical Profile Created Successiful"
+        android:layout_marginTop="116dp"
+        android:text="Medical Profile Updated Successiful"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.589"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
@@ -21,9 +22,10 @@
         android:id="@+id/imageView6"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="92dp"
         android:scrollbarSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/success" />
@@ -32,12 +34,13 @@
         android:id="@+id/buttonSuccess"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="132dp"
         android:background="@drawable/button_curve"
         android:text="Continue"
-        app:backgroundTint="@color/main"
         android:textColor="@color/white"
+        app:backgroundTint="@color/main"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MPsuccess" />
 

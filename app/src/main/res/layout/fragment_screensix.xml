@@ -23,13 +23,13 @@
     <TextView
         android:id="@+id/textView3"
         android:layout_width="350dp"
-        android:layout_margin="10dp"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:text="Thank you for choosing My Doctor. We are glad to serve you and to have you as our patient."
         android:textAlignment="center"
         android:textColor="#000"
         android:textSize="15dp"
-       android:textStyle="normal"
+        android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
@@ -43,7 +43,9 @@
         app:cornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.602" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

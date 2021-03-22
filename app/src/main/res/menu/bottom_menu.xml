@@ -6,14 +6,15 @@
         android:title="Home" />
     <item
         android:id="@+id/nearestFragment"
-        android:icon="@drawable/ic_pharmacy"
+        android:icon="@drawable/ic_hospital"
         android:title="Nearby Hospital" />
+
     <item
         android:id="@+id/emagency"
         android:icon="@drawable/ic_emergency"
         android:title="Emagency Contact" />
     <item
-        android:id="@+id/discoveryFragment"
-        android:icon="@drawable/ic_discover"
-        android:title="Discoveries" />
+        android:id="@+id/ambulance"
+        android:icon="@drawable/ic_ambulance"
+        android:title="Get Ambulance" />
 </menu>

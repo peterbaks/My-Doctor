@@ -55,6 +55,14 @@ public class SplashScreen extends AppCompatActivity {
                     Diseases diseases2 = new Diseases("Tuberclosis","Bleeding, Sweating","Visit nearby hospital");
                     Diseases diseases3 = new Diseases("Typhoid","Vomiting, Red Eyes","Take warm water");
                     Diseases diseases4 = new Diseases("HIV/AIDs","Shivering","Wear heavy clothes");
+                    Diseases diseases5 = new Diseases("Malaria","Vomiting, Fever","Buy mosquito net");
+                    Diseases diseases6 = new Diseases("Tuberclosis","Bleeding, Sweating","Visit nearby hospital");
+                    Diseases diseases7 = new Diseases("Typhoid","Vomiting, Red Eyes","Take warm water");
+                    Diseases diseases8 = new Diseases("HIV/AIDs","Shivering","Wear heavy clothes");
+                    Diseases diseases9= new Diseases("Malaria","Vomiting, Fever","Buy mosquito net");
+                    Diseases diseases10 = new Diseases("Tuberclosis","Bleeding, Sweating","Visit nearby hospital");
+                    Diseases diseases11 = new Diseases("Typhoid","Vomiting, Red Eyes","Take warm water");
+                    Diseases diseases12= new Diseases("HIV/AIDs","Shivering","Wear heavy clothes");
                     insertDisease(diseases);
                     insertDisease(diseases2);
                     insertDisease(diseases3);

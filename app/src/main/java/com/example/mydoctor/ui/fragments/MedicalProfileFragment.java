@@ -120,7 +120,6 @@ public class MedicalProfileFragment extends Fragment {
                 else if (binding.negativeHiv.getText().toString().isEmpty()){
                     binding.negativeHiv.setError("Required");
                 }
-                else
                 createMedicalProfile();
                 Navigation.findNavController(v).navigate(R.id.action_medicalProfileFragment_to_successFragment);
             }
