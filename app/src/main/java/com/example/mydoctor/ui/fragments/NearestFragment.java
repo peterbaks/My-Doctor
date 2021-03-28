@@ -151,6 +151,8 @@ public class NearestFragment extends Fragment implements LocationListener, OnMap
     @SuppressLint("LogNotTimber")
     private void parseLocationResult(JSONObject result) {
 
+        Log.d(TAG, "parseLocationResult: "+result.toString());
+
         String placeName = null, vicinity = null;
         double latitude, longitude;
 
@@ -193,6 +195,7 @@ public class NearestFragment extends Fragment implements LocationListener, OnMap
 
     @Override
     public void onLocationChanged(Location location) {
+        Log.d(TAG, "onLocationChanged: ");
 
         double latitude = location.getLatitude();
         double longitude = location.getLongitude();
@@ -201,6 +204,8 @@ public class NearestFragment extends Fragment implements LocationListener, OnMap
         mMap.addMarker(new MarkerOptions().position(latLng).title("Hospital"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(12));
+
+        Log.d(TAG, "onLocationChanged: "+latLng);
 
         loadNearByPlaces(latitude, longitude);
     }

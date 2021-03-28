@@ -13,6 +13,8 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+
+
     <application
         android:name="com.example.mydoctor.others.AppController"
         android:allowBackup="true"
@@ -32,7 +34,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCtQAvpYN-OsgINdOotfqXhRe2Q9rjosko" />
+            android:value="AIzaSyD1pqCXuTVMkomWmR89VOU78vdRCPY_mfI" />
 
         <activity android:name="com.example.mydoctor.ui.activities.SignUpActivity" />
         <activity android:name="com.example.mydoctor.ui.activities.MainActivity" />
