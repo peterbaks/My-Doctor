@@ -32,7 +32,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="AIzaSyCtQAvpYN-OsgINdOotfqXhRe2Q9rjosko" />
 
         <activity android:name="com.example.mydoctor.ui.activities.SignUpActivity" />
         <activity android:name="com.example.mydoctor.ui.activities.MainActivity" />

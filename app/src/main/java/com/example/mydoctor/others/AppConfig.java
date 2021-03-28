@@ -15,7 +15,7 @@ public class AppConfig {
     public static final String PLACE_ID = "place_id";
     public static final String REFERENCE = "reference";
     public static final String VICINITY = "vicinity";
-    public static final String GOOGLE_BROWSER_API_KEY = "AIzaSyAnyaYSN457snBBq38451ppibWi9pnMx68";
+    public static final String GOOGLE_BROWSER_API_KEY = "AIzaSyCtQAvpYN-OsgINdOotfqXhRe2Q9rjosko";
     public static final int PROXIMITY_RADIUS = 5000;
     public static final long MIN_DISTANCE_CHANGE_FOR_UPDATES = 100;
     public static final long MIN_TIME_BW_UPDATES = 1000 * 60 * 5;
