@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
@@ -48,18 +49,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import static com.example.mydoctor.others.AppConfig.GEOMETRY;
-import static com.example.mydoctor.others.AppConfig.GOOGLE_BROWSER_API_KEY;
-import static com.example.mydoctor.others.AppConfig.LATITUDE;
-import static com.example.mydoctor.others.AppConfig.LOCATION;
-import static com.example.mydoctor.others.AppConfig.LONGITUDE;
-import static com.example.mydoctor.others.AppConfig.MIN_DISTANCE_CHANGE_FOR_UPDATES;
-import static com.example.mydoctor.others.AppConfig.MIN_TIME_BW_UPDATES;
-import static com.example.mydoctor.others.AppConfig.NAME;
-import static com.example.mydoctor.others.AppConfig.OK;
-import static com.example.mydoctor.others.AppConfig.PROXIMITY_RADIUS;
-import static com.example.mydoctor.others.AppConfig.STATUS;
-import static com.example.mydoctor.others.AppConfig.VICINITY;
+import timber.log.Timber;
+
+import static com.example.mydoctor.others.AppConfig.*;
+
 
 public class NearestFragment extends Fragment implements LocationListener, OnMapReadyCallback {
     GoogleMap mMap;
@@ -79,8 +72,8 @@ public class NearestFragment extends Fragment implements LocationListener, OnMap
         coordinatorLayout = view.findViewById(R.id.nearest_frag);
         locationManager = (LocationManager) requireContext().getSystemService(Context.LOCATION_SERVICE);
 
-        Log.d(TAG, "onCreateView: " + locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER));
-       /* if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+        Log.d(TAG, "onCreateView: "+locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER));
+        /*if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
             showLocationSettings();
         }*/
 
@@ -106,6 +99,7 @@ public class NearestFragment extends Fragment implements LocationListener, OnMap
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
+        Log.d(TAG, "onMapReady: map ready");
         mMap = googleMap;
 
         if (ActivityCompat.checkSelfPermission(requireContext(), android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
@@ -120,6 +114,7 @@ public class NearestFragment extends Fragment implements LocationListener, OnMap
     }
 
     private void showCurrentLocation() {
+
         Criteria criteria = new Criteria();
         String bestProvider = locationManager.getBestProvider(criteria, true);
 
@@ -156,6 +151,8 @@ public class NearestFragment extends Fragment implements LocationListener, OnMap
     @SuppressLint("LogNotTimber")
     private void parseLocationResult(JSONObject result) {
 
+        Log.d(TAG, "parseLocationResult: "+result.toString());
+
         String placeName = null, vicinity = null;
         double latitude, longitude;
 
@@ -179,7 +176,7 @@ public class NearestFragment extends Fragment implements LocationListener, OnMap
                     longitude = place.getJSONObject(GEOMETRY).getJSONObject(LOCATION).getDouble(LONGITUDE);
 
                     LatLng latLng = new LatLng(latitude, longitude);
-                    Marker hospitals = mMap.addMarker(new MarkerOptions()
+                    Marker hospitals = mMap.addMarker (new MarkerOptions()
                             .position(latLng)
                             .title(placeName)
                             .snippet(vicinity)
@@ -188,7 +185,7 @@ public class NearestFragment extends Fragment implements LocationListener, OnMap
                     hospitals.showInfoWindow();
                 }
 
-                Toast.makeText(getContext(), jsonArray.length() + " Hospitals found!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), jsonArray.length() + " Hospitals found!",Toast.LENGTH_LONG).show();
             }
 
         } catch (JSONException e) {
@@ -198,6 +195,7 @@ public class NearestFragment extends Fragment implements LocationListener, OnMap
 
     @Override
     public void onLocationChanged(Location location) {
+        Log.d(TAG, "onLocationChanged: ");
 
         double latitude = location.getLatitude();
         double longitude = location.getLongitude();
@@ -207,20 +205,19 @@ public class NearestFragment extends Fragment implements LocationListener, OnMap
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(12));
 
+        Log.d(TAG, "onLocationChanged: "+latLng);
+
         loadNearByPlaces(latitude, longitude);
     }
 
     @Override
-    public void onStatusChanged(String s, int i, Bundle bundle) {
-    }
+    public void onStatusChanged(String s, int i, Bundle bundle) { }
 
     @Override
-    public void onProviderEnabled(String s) {
-    }
+    public void onProviderEnabled(String s) { }
 
     @Override
-    public void onProviderDisabled(String s) {
-    }
+    public void onProviderDisabled(String s) { }
 
     //Convert the custom marker icon to bitmap
     private Bitmap getMarkerBitmapFromView(@DrawableRes int resId) {
@@ -240,12 +237,57 @@ public class NearestFragment extends Fragment implements LocationListener, OnMap
         customMarkerView.draw(canvas);
         return returnedBitmap;
     }
-
-
 }
 
-/*
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*SupportMapFragment mMapFragment = (SupportMapFragment) getChildFragmentManager()
+                .findFragmentById(R.id.map);
+        assert mMapFragment != null;
+        mMapFragment.getMapAsync(this);
+
+
+        return view;
+
+    }
+
+    private boolean isGooglePlayServicesAvailable() {
+        int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getContext());
+        if (ConnectionResult.SUCCESS == status) {
+            return true;
+        } else {
+            GooglePlayServicesUtil.getErrorDialog(status, getActivity(), 0).show();
+            return false;
+        }
+    }
+
+
+    @Override
+    public void onLocationChanged(Location location) {
+        *//*lat = location.getLatitude();
+        lng = location.getLongitude();*//*
         LatLng latLng = new LatLng(lat, lng);
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         googleMap.animateCamera(CameraUpdateFactory.zoomTo(12));
@@ -307,30 +349,4 @@ public class NearestFragment extends Fragment implements LocationListener, OnMap
 
     }
 
-}
-        SupportMapFragment mMapFragment = (SupportMapFragment) getChildFragmentManager()
-                .findFragmentById(R.id.map);
-        assert mMapFragment != null;
-        mMapFragment.getMapAsync(this);
-
-
-        return view;
-
-    }
-
-    private boolean isGooglePlayServicesAvailable() {
-        int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getContext());
-        if (ConnectionResult.SUCCESS == status) {
-            return true;
-        } else {
-            GooglePlayServicesUtil.getErrorDialog(status, getActivity(), 0).show();
-            return false;
-        }
-    }
-
-
-    @Override
-    public void onLocationChanged(Location location){
-        *//*lat = location.getLatitude();
-        lng=location.getLongitude();
-*/
+}*/
